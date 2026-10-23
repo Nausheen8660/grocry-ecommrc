@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart — FreshCart</title>
+<meta name="description" content="Review your FreshCart grocery basket and check out.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>🎉 Free delivery on orders over $40 — every day</span>
+    <div class="topbar-links">
+      <a href="order.html" class="hide-sm">Track your order</a>
+      <a href="#">Help Centre</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header-inner">
+    <button class="icon-btn menu-toggle" data-drawer=".mobile-drawer" aria-label="Open menu"></button>
+
+    <a class="logo" href="index.html" aria-label="FreshCart home">
+      <span class="logo-mark">🛒</span>
+      <span class="logo-text"><strong>FreshCart</strong><span>Grocery Delivery</span></span>
+    </a>
+
+    <div class="search-bar">
+      <form data-search-form role="search">
+        <span class="input-icon" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </span>
+        <input class="input" type="search" name="q" placeholder="Search for milk, bread, apples…" aria-label="Search products" autocomplete="off">
+        <button class="search-clear hide" type="button" aria-label="Clear search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"></button>
+      <a class="icon-btn" href="wishlist.html" aria-label="Saved items">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5 4.1 13a4.6 4.6 0 0 1 6.5-6.5l1.4 1.3 1.4-1.3A4.6 4.6 0 1 1 19.9 13Z"/></svg>
+        <span class="badge-count" data-wish-count></span>
+      </a>
+      <a class="icon-btn" href="cart.html" aria-label="Shopping cart">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2.2l2.3 12.1a1.8 1.8 0 0 0 1.8 1.4h8.9a1.8 1.8 0 0 0 1.8-1.4L21 7H5.4"/></svg>
+        <span class="badge-count" data-cart-count></span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-bar" aria-label="Primary">
+  <div class="container nav-inner">
+    <a class="nav-link active" href="index.html">Shop All</a>
+    <a class="nav-link" href="index.html?cat=produce">Fruits &amp; Veg</a>
+    <a class="nav-link" href="index.html?cat=dairy">Dairy &amp; Eggs</a>
+    <a class="nav-link" href="index.html?cat=bakery">Bakery</a>
+    <a class="nav-link" href="index.html?cat=meat">Meat &amp; Seafood</a>
+    <a class="nav-link" href="index.html?cat=pantry">Pantry</a>
+    <a class="nav-link" href="index.html?cat=beverage">Beverages</a>
+    <a class="nav-link" href="index.html?cat=snacks">Snacks</a>
+    <a class="nav-link" href="index.html?cat=frozen">Frozen</a>
+    <a class="nav-link" href="wishlist.html">Saved</a>
+  </div>
+</nav>
+
+<aside class="mobile-drawer" aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <span class="logo-text"><strong>Browse</strong></span>
+    <button class="icon-btn" data-close-drawer aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <a class="drawer-link active" href="index.html">🛒 Shop All</a>
+    <a class="drawer-link" href="index.html?cat=produce">🥬 Fruits &amp; Veg</a>
+    <a class="drawer-link" href="index.html?cat=dairy">🥛 Dairy &amp; Eggs</a>
+    <a class="drawer-link" href="index.html?cat=bakery">🥖 Bakery</a>
+    <a class="drawer-link" href="index.html?cat=meat">🍗 Meat &amp; Seafood</a>
+    <a class="drawer-link" href="index.html?cat=pantry">🥫 Pantry</a>
+    <a class="drawer-link" href="index.html?cat=beverage">🧃 Beverages</a>
+    <a class="drawer-link" href="index.html?cat=snacks">🍿 Snacks</a>
+    <a class="drawer-link" href="index.html?cat=frozen">🧊 Frozen</a>
+    <hr class="divider" style="margin:10px 0">
+    <a class="drawer-link" href="wishlist.html">♡ Saved Items</a>
+    <a class="drawer-link" href="cart.html">🛒 Shopping Cart</a>
+    <a class="drawer-link" href="order.html">📦 My Orders</a>
+  </div>
+</aside>
+<div class="scrim"></div>
+
+<main class="page">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Step 1 of 3</span>
+        <h1>Your basket</h1>
+        <p id="cartSub">Loading your items…</p>
+      </div>
+      <a class="btn btn-outline" href="index.html">← Continue shopping</a>
+    </div>
+
+    <div class="cart-layout">
+      <!-- Items -->
+      <div>
+        <div class="cart-list" id="cartList"></div>
+
+        <div class="feature-grid mt-24">
+          <div class="feature-card"><span class="ico">🚚</span><div><b>Next-day delivery</b><span>Choose your slot at checkout</span></div></div>
+          <div class="feature-card"><span class="ico">🧊</span><div><b>Cold-chain packed</b><span>Chilled items stay below 5°C</span></div></div>
+          <div class="feature-card"><span class="ico">↩️</span><div><b>24h refund promise</b><span>Quality issues refunded instantly</span></div></div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <aside>
+        <div class="summary" id="summary">
+          <h3>Order summary</h3>
+
+          <div class="delivery-meter" id="deliveryMeter"></div>
+
+          <div class="promo">
+            <input class="input" type="text" id="promoInput" placeholder="Promo code (try FRESH10)" aria-label="Promo code">
+            <button class="btn btn-outline" id="promoApply">Apply</button>
+          </div>
+          <div id="promoNote" class="text-sm"></div>
+
+          <div class="summary-rows mt-16" id="summaryRows"></div>
+
+          <a class="btn btn-primary btn-lg btn-block mt-16" href="checkout.html" id="checkoutBtn">Proceed to checkout</a>
+
+          <div class="trust-row">
+            <div class="trust-item"><span class="ico">🔒</span> Secure 256-bit encrypted checkout</div>
+            <div class="trust-item"><span class="ico">↩️</span> Free returns within 24 hours</div>
+            <div class="trust-item"><span class="ico">💳</span> Visa, Mastercard, Amex, PayPal</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col footer-about">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">🛒</span>
+          <span class="logo-text"><strong>FreshCart</strong><span>Grocery Delivery</span></span>
+        </a>
+        <p>Your neighbourhood grocer, online. We source directly from local farms and deliver to your door in as little as an hour.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="index.html?cat=produce">Fruits &amp; Vegetables</a></li>
+          <li><a href="index.html?cat=dairy">Dairy &amp; Eggs</a></li>
+          <li><a href="index.html?cat=bakery">Bakery</a></li>
+          <li><a href="index.html?cat=meat">Meat &amp; Seafood</a></li>
+          <li><a href="index.html?cat=pantry">Pantry Staples</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Sourcing policy</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help centre</a></li>
+          <li><a href="#">Delivery areas</a></li>
+          <li><a href="order.html">Track order</a></li>
+          <li><a href="#">Returns &amp; refunds</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> FreshCart. A demo storefront built with HTML, CSS &amp; JavaScript.</span>
+      <div class="pay-chips">
+        <span class="pay-chip">VISA</span>
+        <span class="pay-chip">MC</span>
+        <span class="pay-chip">AMEX</span>
+        <span class="pay-chip">PAYPAL</span>
+        <span class="pay-chip">APPLE PAY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/cart-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Account — FreshCart</title>
+<meta name="description" content="Create a browser-local FreshCart demo profile.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner account-header">
+    <a class="logo" href="index.html" aria-label="FreshCart home">
+      <span class="logo-mark">🛒</span>
+      <span class="logo-text"><strong>FreshCart</strong><span>Grocery Delivery</span></span>
+    </a>
+    <a class="account-link" href="index.html">Back to shop</a>
+  </div>
+</header>
+
+<main class="page account-page">
+  <div class="container account-container">
+    <section class="account-card" aria-labelledby="account-title">
+      <span class="eyebrow">FreshCart demo</span>
+      <h1 id="account-title">Your account</h1>
+      <p class="account-intro">Continue with a local demo profile to personalize this browser session.</p>
+
+      <div class="account-notice" role="note">
+        <strong>Demo only — not secure authentication.</strong>
+        This site has no server. Your name and email are saved only in this browser; there is no password, account verification, or cross-device access. Do not enter sensitive information.
+      </div>
+
+      <form id="demo-account-form" class="account-form">
+        <div class="field">
+          <label for="demo-name">Name</label>
+          <input class="input" id="demo-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+        </div>
+        <div class="field">
+          <label for="demo-email">Email address</label>
+          <input class="input" id="demo-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        </div>
+        <p id="account-message" class="account-message" role="status" aria-live="polite"></p>
+        <button class="btn btn-primary btn-block" type="submit">Continue as demo</button>
+      </form>
+
+      <div id="demo-account-profile" class="account-profile hide" aria-live="polite">
+        <p class="account-welcome">You’re using a local demo profile.</p>
+        <dl class="account-details">
+          <div><dt>Name</dt><dd data-profile-name></dd></div>
+          <div><dt>Email</dt><dd data-profile-email></dd></div>
+        </dl>
+        <p id="signout-message" class="account-message" role="status" aria-live="polite"></p>
+        <button class="btn btn-outline btn-block" type="button" data-demo-signout>Sign out</button>
+        <a class="account-shop-link" href="index.html">Continue shopping</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/account.js"></script>
+</body>
+</html>
